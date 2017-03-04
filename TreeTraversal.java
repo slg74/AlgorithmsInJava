@@ -1,3 +1,8 @@
+//
+// TreeTraversal.java - Rosetta Code example.
+//                      Added "printType" function that prints the type of traversal.
+//
+
 import java.util.*;
  
 public class TreeTraversal {
