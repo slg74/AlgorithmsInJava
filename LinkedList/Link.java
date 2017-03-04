@@ -15,11 +15,7 @@ class Link {
 		System.out.print("{" + key + ", " + data + "} "); 
 	}
 }
-
-
-
 	
-
 class LinkList {
 	private Link first;
 
@@ -53,6 +49,7 @@ class LinkList {
 		System.out.println(""); 
 	}
 }
+
 class LinkListApp {
 	public static void main(String[] args) {
 		LinkList theList = new LinkList();
