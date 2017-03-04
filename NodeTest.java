@@ -25,7 +25,16 @@ public class NodeTest {
 		inOrderTraversal(node.left);
 		node.visit();
 		inOrderTraversal(node.right);
+
 	}
+
+	// line breaks
+ 	static void br() {
+		for (int i = 0; i<3; i++) {
+			System.out.println(); 
+		}
+	}
+		
 
 	public static void main(String[] args) {
 		Node<Integer> one   = new Node<Integer>(1);
@@ -43,7 +52,7 @@ public class NodeTest {
 		two.visit();
 		three.visit();
 
-		System.out.println(); 
+		br(); 
 		
 		one.left   = two;
 		one.right  = three;
@@ -54,7 +63,10 @@ public class NodeTest {
 		six.left   = eight;
 		six.right  = nine;
 		
-		inOrderTraversal(one); 
+		inOrderTraversal(one); 	 br(); 
+		inOrderTraversal(three); br();  
+		inOrderTraversal(five);  br(); 
+		inOrderTraversal(eight); br(); 
 
 	}
 }
