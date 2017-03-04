@@ -21,6 +21,11 @@ public class TreeTraversal {
 		}
 	}
 
+ 
+	static enum ORDER {
+		PREORDER, INORDER, POSTORDER, LEVEL
+	}
+
         static void printType(ORDER order) {
 		switch (order) {
 		case PREORDER:
@@ -37,12 +42,6 @@ public class TreeTraversal {
 			break;
 		}
 	}		
-			
-        
- 
-	static enum ORDER {
-		PREORDER, INORDER, POSTORDER, LEVEL
-	}
  
 	static void traverse(Node<?> node, ORDER order) {
 
