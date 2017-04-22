@@ -36,6 +36,12 @@ class Node {
 		System.out.println("After inserting 8..."); 
 		b.insert(8); 
 		printInOrder(b); 
+
+		System.out.println();
+
+		System.out.println("After inserting 22...");
+		b.insert(22);
+		printInOrder(b); 
 	}
 
 	public boolean contains(int value) {
