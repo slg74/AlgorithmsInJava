@@ -37,9 +37,14 @@ public class TheStack {
 	}
 
 	public String peek() {
-		displayTheStack();
-		System.out.println("PEEK " + stackArray[topOfStack] + " is at the top of the stack."); 
-		return stackArray[topOfStack];
+		if (topOfStack == -1) {
+			System.out.println("Stack is empty."); 
+			return "-1";
+		} else {
+			displayTheStack();
+			System.out.println("PEEK " + stackArray[topOfStack] + " is at the top of the stack."); 
+			return stackArray[topOfStack];
+		}
 	}
 
 	public void drawBorder() {
@@ -72,6 +77,12 @@ public class TheStack {
 		drawBorder(); 
 	}
 
+	public void popAll() {
+		for (int i=topOfStack; i>0; i--) {
+			pop();
+		}
+	}
+
 	public static void main(String[] args) {
 		TheStack s = new TheStack(10);
 		s.push("10");
@@ -81,30 +92,16 @@ public class TheStack {
 		s.push("13");
 		s.push("5");
 		s.push("29"); 
-		s.displayTheStack();
 		s.push("19"); 
 		s.push("78"); 
 		s.push("32"); 
 		s.push("12"); 
+		s.displayTheStack();
+		System.out.println("Calling popAll...");
+		s.popAll(); 
+		s.displayTheStack();
+		s.pop(); 
+		s.displayTheStack();
 		s.peek(); 
-		s.pop(); 
-		s.push("9"); 
-		s.displayTheStack();
-		s.peek();
-		s.displayTheStack();
-		s.pop();
-		s.displayTheStack();
-		s.pop(); 
-		s.displayTheStack();
-		s.peek();
-		s.pop(); 
-		s.pop(); 
-		s.pop(); 
-		s.pop(); 
-		s.pop(); 
-		s.pop(); 
-		s.displayTheStack();
-		s.peek();
 	}
-
 }
