@@ -23,5 +23,14 @@ public class Link {
 		ls.insertFirstLink("The Lord of the Rings", 150);
 		ls.insertFirstLink("Harry Potter and the Sorcerer's Stone", 750);
 		ls.display();
+
+		System.out.println(ls.find("The Lord of the Rings") + " was found"); 
+
+		String bk = "Ready Player One";
+		if (ls.find(bk) != null) {
+			System.out.println("Found book: " + bk);
+		} else {
+			System.out.println("Did not find book: " + bk);
+		}
 	}
 }
